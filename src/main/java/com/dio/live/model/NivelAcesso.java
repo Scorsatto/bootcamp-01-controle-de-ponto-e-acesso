@@ -9,5 +9,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 public class NivelAcesso {
-    
+
+    private long id;
+    private String descricao;
 }
