@@ -8,8 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class JornadaTrabalho {
-
-    private long id;
-    private String descricao;
+public class NivelAcesso {
+    
 }
