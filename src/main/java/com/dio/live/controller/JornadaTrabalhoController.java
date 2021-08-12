@@ -1,7 +1,10 @@
 package com.dio.live.controller;
 
 import com.dio.live.model.JornadaTrabalho;
+import com.dio.live.service.JornadaTrabalhoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,10 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/jornada")
 public class JornadaTrabalhoController {
 
-    JornadaT
+    @Autowired
+    JornadaTrabalhoService jornadaTrabalhoService;
 
     @PostMapping
-    public JornadaTrabalho createJornadaTrabalho(){
-        return null;
+    public JornadaTrabalho createJornadaTrabalho(@RequestBody JornadaTrabalho jornadaTrabalho){
+        return jornadaTrabalhoService.save(jornadaTrabalho);
     }
 }

@@ -1,4 +1,9 @@
 package com.dio.live.repository;
 
-public class JornadaTrabalhoRepository {
+import com.dio.live.model.JornadaTrabalho;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface JornadaTrabalhoRepository extends JpaRepository<JornadaTrabalho, Long> {
 }
