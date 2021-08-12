@@ -13,12 +13,12 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-web:1.4.0.RELEASE'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.7'
-
+	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml'
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310'
 	runtimeOnly 'mysql:mysql-connector-java'
 
 	compileOnly 'org.projectlombok:lombok:1.18.10'
@@ -30,14 +30,9 @@ dependencies {
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 	implementation group: 'io.springfox', name: 'springfox-bean-validators', version: '2.9.2'
 
-	implementation group: 'org.hibernate', name: 'hibernate-envers', version: '5.4.32.Final'
-	implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.5.Final'
-
-	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
-
-	implementation group: 'org.javassist', name: 'javassist', version: '3.28.0-GA'
-
-	implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.2.3.Final'
+	implementation group: 'org.hibernate', name: 'hibernate-validator'
+	implementation group: 'org.hibernate', name: 'hibernate-envers'
+	implementation group: 'org.hibernate', name: 'hibernate-core'
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
