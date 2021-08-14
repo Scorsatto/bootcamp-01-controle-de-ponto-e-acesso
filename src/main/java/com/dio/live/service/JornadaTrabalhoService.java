@@ -30,7 +30,7 @@ public class JornadaTrabalhoService {
         return jornadaTrabalhoRepository.save(jornadaTrabalho);
     }
 
-    public void delete(Long idJornada) {
+    public void deleteById(Long idJornada) {
         jornadaTrabalhoRepository.deleteById(idJornada);
     }
 }
