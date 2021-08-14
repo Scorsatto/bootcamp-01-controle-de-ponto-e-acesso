@@ -43,6 +43,6 @@ public class JornadaTrabalhoController {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        return (ResponseEntity<JornadaTrabalho>) ResponseEntity.ok();
+        return ResponseEntity.ok(null);
     }
 }
